@@ -1,0 +1,6 @@
+{
+  "name": "VortexGlobe - 3D Storm Tracker",
+  "description": "Real-time 3D global weather visualization and tropical storm tracking with category wind fields and forecast cones.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

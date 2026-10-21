@@ -1,0 +1,385 @@
+import { StormSystem } from '../types/weather';
+
+export const INITIAL_STORMS: StormSystem[] = [
+  {
+    id: 'WP-2026-21',
+    name: 'YAGI',
+    basin: 'Western Pacific',
+    category: 5,
+    categoryLabel: 'Category 5 Super Typhoon',
+    center: {
+      lat: 19.4,
+      lon: 114.2,
+    },
+    windSpeedKnots: 145,
+    gustsKnots: 175,
+    pressureHpa: 915,
+    movementHeadingDeg: 285,
+    movementSpeedKnots: 12,
+    radiusKm: 280,
+    color: '#ef4444', // Crimson / Magenta
+    status: 'Rapidly Intensifying',
+    advisoryNumber: 'JTWC Warning #28',
+    formationDate: 'Active Day 4',
+    summary: 'Extremely dangerous Category 5 Super Typhoon traversing the South China Sea. Symmetrical double eyewall with severe inner convective bands.',
+    historicalTrack: [
+      { lat: 15.2, lon: 123.8 },
+      { lat: 16.4, lon: 120.5 },
+      { lat: 17.8, lon: 117.6 },
+      { lat: 18.7, lon: 115.8 },
+      { lat: 19.4, lon: 114.2 },
+    ],
+    forecast: [
+      {
+        hours: 12,
+        lat: 19.9,
+        lon: 112.1,
+        windSpeedKnots: 140,
+        pressureHpa: 920,
+        category: 5,
+        uncertaintyRadiusKm: 65,
+        timestamp: '+12h',
+      },
+      {
+        hours: 24,
+        lat: 20.3,
+        lon: 109.8,
+        windSpeedKnots: 130,
+        pressureHpa: 932,
+        category: 4,
+        uncertaintyRadiusKm: 110,
+        timestamp: '+24h',
+      },
+      {
+        hours: 48,
+        lat: 21.1,
+        lon: 106.5,
+        windSpeedKnots: 95,
+        pressureHpa: 960,
+        category: 2,
+        uncertaintyRadiusKm: 180,
+        timestamp: '+48h',
+      },
+      {
+        hours: 72,
+        lat: 21.8,
+        lon: 103.8,
+        windSpeedKnots: 55,
+        pressureHpa: 990,
+        category: 0,
+        uncertaintyRadiusKm: 260,
+        timestamp: '+72h',
+      },
+    ],
+    radii: {
+      radius34kt: [180, 160, 140, 170],
+      radius50kt: [90, 80, 70, 85],
+      radius64kt: [50, 45, 40, 45],
+    },
+  },
+  {
+    id: 'AL-2026-09',
+    name: 'BERYL',
+    basin: 'North Atlantic',
+    category: 4,
+    categoryLabel: 'Category 4 Major Hurricane',
+    center: {
+      lat: 24.8,
+      lon: -87.2,
+    },
+    windSpeedKnots: 125,
+    gustsKnots: 150,
+    pressureHpa: 938,
+    movementHeadingDeg: 310,
+    movementSpeedKnots: 14,
+    radiusKm: 240,
+    color: '#f59e0b', // Amber
+    status: 'Active',
+    advisoryNumber: 'NHC Advisory #34',
+    formationDate: 'Active Day 6',
+    summary: 'Powerful Major Hurricane tracking across the Gulf of Mexico. Warm sea surface temperatures fueling sustained high-tier destructive wind fields.',
+    historicalTrack: [
+      { lat: 18.2, lon: -75.4 },
+      { lat: 19.8, lon: -80.1 },
+      { lat: 21.5, lon: -83.7 },
+      { lat: 23.2, lon: -85.5 },
+      { lat: 24.8, lon: -87.2 },
+    ],
+    forecast: [
+      {
+        hours: 12,
+        lat: 26.2,
+        lon: -89.1,
+        windSpeedKnots: 130,
+        pressureHpa: 934,
+        category: 4,
+        uncertaintyRadiusKm: 70,
+        timestamp: '+12h',
+      },
+      {
+        hours: 24,
+        lat: 27.5,
+        lon: -91.4,
+        windSpeedKnots: 120,
+        pressureHpa: 945,
+        category: 3,
+        uncertaintyRadiusKm: 120,
+        timestamp: '+24h',
+      },
+      {
+        hours: 48,
+        lat: 29.2,
+        lon: -94.8,
+        windSpeedKnots: 105,
+        pressureHpa: 958,
+        category: 2,
+        uncertaintyRadiusKm: 190,
+        timestamp: '+48h',
+      },
+      {
+        hours: 72,
+        lat: 31.4,
+        lon: -95.6,
+        windSpeedKnots: 50,
+        pressureHpa: 994,
+        category: 0,
+        uncertaintyRadiusKm: 280,
+        timestamp: '+72h',
+      },
+    ],
+    radii: {
+      radius34kt: [190, 170, 130, 160],
+      radius50kt: [100, 85, 65, 80],
+      radius64kt: [45, 40, 30, 40],
+    },
+  },
+  {
+    id: 'EP-2026-14',
+    name: 'KRISTY',
+    basin: 'Eastern Pacific',
+    category: 4,
+    categoryLabel: 'Category 4 Major Hurricane',
+    center: {
+      lat: 14.5,
+      lon: -116.8,
+    },
+    windSpeedKnots: 120,
+    gustsKnots: 145,
+    pressureHpa: 942,
+    movementHeadingDeg: 270,
+    movementSpeedKnots: 16,
+    radiusKm: 210,
+    color: '#fb923c', // Orange
+    status: 'Active',
+    advisoryNumber: 'NHC Advisory #18',
+    formationDate: 'Active Day 3',
+    summary: 'Well-organized Pacific hurricane tracking due west in open ocean. Compact 18nm eye with severe radial pressure gradients.',
+    historicalTrack: [
+      { lat: 12.8, lon: -106.2 },
+      { lat: 13.5, lon: -109.8 },
+      { lat: 14.0, lon: -113.4 },
+      { lat: 14.5, lon: -116.8 },
+    ],
+    forecast: [
+      {
+        hours: 12,
+        lat: 14.7,
+        lon: -120.2,
+        windSpeedKnots: 125,
+        pressureHpa: 938,
+        category: 4,
+        uncertaintyRadiusKm: 60,
+        timestamp: '+12h',
+      },
+      {
+        hours: 24,
+        lat: 15.0,
+        lon: -123.5,
+        windSpeedKnots: 110,
+        pressureHpa: 950,
+        category: 3,
+        uncertaintyRadiusKm: 115,
+        timestamp: '+24h',
+      },
+      {
+        hours: 48,
+        lat: 16.2,
+        lon: -129.8,
+        windSpeedKnots: 80,
+        pressureHpa: 975,
+        category: 1,
+        uncertaintyRadiusKm: 180,
+        timestamp: '+48h',
+      },
+      {
+        hours: 72,
+        lat: 17.8,
+        lon: -134.5,
+        windSpeedKnots: 45,
+        pressureHpa: 998,
+        category: 0,
+        uncertaintyRadiusKm: 270,
+        timestamp: '+72h',
+      },
+    ],
+    radii: {
+      radius34kt: [150, 140, 120, 130],
+      radius50kt: [80, 75, 60, 70],
+      radius64kt: [35, 30, 25, 30],
+    },
+  },
+  {
+    id: 'IO-2026-03',
+    name: 'DANA',
+    basin: 'North Indian',
+    category: 2,
+    categoryLabel: 'Category 2 Severe Cyclonic Storm',
+    center: {
+      lat: 18.8,
+      lon: 88.5,
+    },
+    windSpeedKnots: 90,
+    gustsKnots: 110,
+    pressureHpa: 972,
+    movementHeadingDeg: 325,
+    movementSpeedKnots: 9,
+    radiusKm: 190,
+    color: '#06b6d4', // Cyan
+    status: 'Landfall Imminent',
+    advisoryNumber: 'IMD Bulletin #16',
+    formationDate: 'Active Day 3',
+    summary: 'Severe cyclonic storm swirling in the Bay of Bengal heading towards Odisha-West Bengal coastline with torrential rain bands.',
+    historicalTrack: [
+      { lat: 14.2, lon: 91.2 },
+      { lat: 16.1, lon: 89.9 },
+      { lat: 17.6, lon: 89.1 },
+      { lat: 18.8, lon: 88.5 },
+    ],
+    forecast: [
+      {
+        hours: 12,
+        lat: 20.2,
+        lon: 87.4,
+        windSpeedKnots: 85,
+        pressureHpa: 976,
+        category: 2,
+        uncertaintyRadiusKm: 55,
+        timestamp: '+12h',
+      },
+      {
+        hours: 24,
+        lat: 21.6,
+        lon: 86.2,
+        windSpeedKnots: 65,
+        pressureHpa: 988,
+        category: 1,
+        uncertaintyRadiusKm: 95,
+        timestamp: '+24h',
+      },
+      {
+        hours: 48,
+        lat: 23.2,
+        lon: 84.8,
+        windSpeedKnots: 35,
+        pressureHpa: 1002,
+        category: 0,
+        uncertaintyRadiusKm: 160,
+        timestamp: '+48h',
+      },
+    ],
+    radii: {
+      radius34kt: [140, 130, 110, 120],
+      radius50kt: [70, 65, 50, 60],
+      radius64kt: [30, 25, 20, 25],
+    },
+  },
+  {
+    id: 'SP-2026-07',
+    name: 'MALIA',
+    basin: 'South Pacific',
+    category: 3,
+    categoryLabel: 'Category 3 Severe Tropical Cyclone',
+    center: {
+      lat: -17.2,
+      lon: 172.4,
+    },
+    windSpeedKnots: 105,
+    gustsKnots: 130,
+    pressureHpa: 958,
+    movementHeadingDeg: 155,
+    movementSpeedKnots: 11,
+    radiusKm: 220,
+    color: '#eab308', // Gold
+    status: 'Active',
+    advisoryNumber: 'Fiji Met Service Advisory #12',
+    formationDate: 'Active Day 4',
+    summary: 'Clockwise rotating South Pacific cyclone tracking southeast of Fiji. Broad gale radius with intense eyewall convection.',
+    historicalTrack: [
+      { lat: -13.5, lon: 169.2 },
+      { lat: -14.8, lon: 170.5 },
+      { lat: -16.0, lon: 171.4 },
+      { lat: -17.2, lon: 172.4 },
+    ],
+    forecast: [
+      {
+        hours: 12,
+        lat: -18.8,
+        lon: 173.6,
+        windSpeedKnots: 100,
+        pressureHpa: 962,
+        category: 3,
+        uncertaintyRadiusKm: 65,
+        timestamp: '+12h',
+      },
+      {
+        hours: 24,
+        lat: -20.6,
+        lon: 175.2,
+        windSpeedKnots: 85,
+        pressureHpa: 974,
+        category: 2,
+        uncertaintyRadiusKm: 120,
+        timestamp: '+24h',
+      },
+      {
+        hours: 48,
+        lat: -24.0,
+        lon: 178.5,
+        windSpeedKnots: 60,
+        pressureHpa: 988,
+        category: 1,
+        uncertaintyRadiusKm: 210,
+        timestamp: '+48h',
+      },
+    ],
+    radii: {
+      radius34kt: [160, 150, 130, 140],
+      radius50kt: [85, 75, 65, 75],
+      radius64kt: [40, 35, 30, 35],
+    },
+  },
+];
+
+export function convertSpeed(knots: number, unit: 'knots' | 'mph' | 'kmh'): { value: number; unitLabel: string } {
+  switch (unit) {
+    case 'mph':
+      return { value: Math.round(knots * 1.15078), unitLabel: 'mph' };
+    case 'kmh':
+      return { value: Math.round(knots * 1.852), unitLabel: 'km/h' };
+    case 'knots':
+    default:
+      return { value: knots, unitLabel: 'kt' };
+  }
+}
+
+// Convert spherical lat/lon to 3D Cartesian coordinates on sphere of radius R
+export function latLonToVector3(lat: number, lon: number, radius: number): [number, number, number] {
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (lon + 180) * (Math.PI / 180);
+
+  const x = -(radius * Math.sin(phi) * Math.cos(theta));
+  const z = radius * Math.sin(phi) * Math.sin(theta);
+  const y = radius * Math.cos(phi);
+
+  return [x, y, z];
+}
